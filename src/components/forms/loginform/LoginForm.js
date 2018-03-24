@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import {Button, Form } from 'semantic-ui-react'
 import Validator from 'validator'
-import InlineError from '../messages/InlineError'
+import InlineError from '../../messages/InlineError'
+import './LoginForm.css'
 class LoginForm extends React.Component{
     state = {
       data : {
@@ -36,7 +37,7 @@ class LoginForm extends React.Component{
     render(){
         const {data, errors} = this.state;
         return(
-            <Form onSubmit={this.onSubmit}>
+            <Form onSubmit={this.onSubmit} className="loginForm">
                 <Form.Field error = {!!errors.email}>
                     <label htmlFor= "email">Email</label>
                     <input

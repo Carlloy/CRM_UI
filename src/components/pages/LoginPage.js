@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginForm from '../forms/LoginForm'
+import LoginForm from '../forms/loginform/LoginForm'
 
 class LoginPage extends React.Component{
     submit = (data) => {
@@ -9,7 +9,7 @@ class LoginPage extends React.Component{
     render(){
         return (
             <div>
-                <h1>Login Page</h1>
+                <h1>Simple CRM</h1>
 
                 <LoginForm submit={this.submit}/>
             </div>
