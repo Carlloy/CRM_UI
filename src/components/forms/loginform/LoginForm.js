@@ -4,6 +4,8 @@ import {Button, Form } from 'semantic-ui-react'
 import Validator from 'validator'
 import InlineError from '../../messages/InlineError'
 import './LoginForm.css'
+
+
 class LoginForm extends React.Component{
     state = {
       data : {
@@ -30,7 +32,7 @@ class LoginForm extends React.Component{
         const errors = {};
         if(!Validator.isEmail(data.email)) errors.email = "Invalid email";
         if(!data.password) errors.password = "Password can't be empty";
-        //todo : password length and letters size validators
+        // todo : password length and letters size validators
         return errors;
     };
 
